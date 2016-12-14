@@ -5,8 +5,8 @@ using System.Collections.Generic;
 public class SimpleCarController : MonoBehaviour
 {
     public List<AxleInfo> axleInfos; // the information about each individual axle
-    public float maxMotorTorque; // maximum torque the motor can apply to wheel
-    public float maxSteeringAngle; // maximum steer angle the wheel can have
+    public float maxMotorTorque; // maximum torque (in Newton meters) the motor can apply to wheel
+    public float maxSteeringAngle; // maximum steer angle (in degrees) the wheel can have (don't go above ~65 deg.)
 
     public void FixedUpdate()
     {

@@ -289,7 +289,7 @@ Transform:
   m_GameObject: {fileID: 1000011616542912}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.7, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.9254, y: 1.9254, z: 1.9254}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 4000013651014650}
@@ -666,8 +666,8 @@ MonoBehaviour:
     rightWheel: {fileID: 146000013624811468}
     motor: 1
     steering: 0
-  maxMotorTorque: 10000
-  maxSteeringAngle: 35
+  maxMotorTorque: 10000000
+  maxSteeringAngle: 25
 --- !u!146 &146000010256237860
 WheelCollider:
   m_ObjectHideFlags: 1
