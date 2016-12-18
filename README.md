@@ -18,10 +18,13 @@ Rocket Car is a game about going fast, really really fast.
 Instructions:
 ==========
 
-• Drive your car around the track as fast as you can!
-• Use your booster for extra speed!
-• Fuel is restored at each checkpoint.
-• If you crash (or wish to reset), you will re-spawn at your last checkpoint with full fuel.
+- Drive your car around the track as fast as you can!
+
+- Use your booster for extra speed!
+
+- Fuel is restored at each checkpoint.
+
+- If you crash (or wish to reset), you will re-spawn at your last checkpoint with full fuel.
 
 Controls:
 ==========
