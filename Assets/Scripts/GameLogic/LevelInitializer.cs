@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
-public class LevelInitializer : MonoBehaviour {
+public class LevelInitializer : MonoBehaviour
+{
     float countDown;
     Text countDownText;
+
     public void Start()
     {
         countDownText = GetComponent<Text>();
@@ -11,6 +13,7 @@ public class LevelInitializer : MonoBehaviour {
         StartCoroutine(tickCountDown());
         GameObject.Find("Main Camera").GetComponent<DOF>().enabled = true;
     }
+
     IEnumerator tickCountDown()
     {
         yield return new WaitForSeconds(1);
@@ -22,9 +25,7 @@ public class LevelInitializer : MonoBehaviour {
             case "1":
                 countDownText.text = "GO!"; StartCoroutine(tickCountDown()); break;
             case "GO!":
-                countDownText.text = ""; StartGame();
-
-                break;
+                countDownText.text = ""; StartGame(); break;
         }
     }
 

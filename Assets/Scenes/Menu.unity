@@ -1837,7 +1837,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'graphicsTest
+  m_Text: 'Level Zero
 
 '
 --- !u!222 &1256146556
@@ -2521,6 +2521,8 @@ MonoBehaviour:
   m_Text: 'This game was made possible by the following:
 
     Unity Learn Tutorials
+
+    Unity Standard Assets
 
     Unity Community Forums
 

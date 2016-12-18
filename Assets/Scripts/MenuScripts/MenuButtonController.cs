@@ -32,7 +32,7 @@ public class MenuButtonController : MonoBehaviour
 
     public void PlayNewGame()
     {
-        SceneManager.LoadScene("graphicsTest", LoadSceneMode.Single);
+        SceneManager.LoadScene("LevelZero", LoadSceneMode.Single);
         if (OnPlayGame != null)
         {
             OnPlayGame();
