@@ -2507,8 +2507,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc8945fefc805a64ab1c14bd6233f57d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrustForce: 10000
-  fuelDuration: 60
+  thrustForce: 100000
+  fuelDuration: 6
 --- !u!114 &114000012098713952
 MonoBehaviour:
   m_ObjectHideFlags: 1

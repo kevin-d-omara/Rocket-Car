@@ -70,9 +70,6 @@ namespace UnityStandardAssets.Vehicles.Car
 
             m_Rigidbody = GetComponent<Rigidbody>();
             m_CurrentTorque = m_FullTorqueOverAllWheels - (m_TractionControl*m_FullTorqueOverAllWheels);
-
-            // set thruster position
-            BoxCollider bc = GetComponentInChildren<BoxCollider>();
         }
 
 
