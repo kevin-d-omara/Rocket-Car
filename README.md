@@ -10,26 +10,32 @@ Members:
     4. Adrian Cedeño
     5. Barry Evans
     
-What is ProjectToBeDecided?
+What is Rocket Car?
 ==========
 
-ProjectToBeDecided is a game that is yet to be decided!
+Rocket Car is a game about going fast, really really fast.
 
 Instructions:
 ==========
 
-• I don't know yet!
+- Drive your car around the track as fast as you can!
+
+- Use your booster for extra speed!
+
+- Fuel is restored at each checkpoint.
+
+- If you crash (or wish to reset), you will re-spawn at your last checkpoint with full fuel.
 
 Controls:
 ==========
 ##### Player 1:
 
-    Who knows?
+    Accelerate - 'W'
+    Brake - 'S'
+    Steer Left/Right - 'A, D'
+    Handbrake - 'Space'
+    Booster - 'Left Shift'
 
-##### Player 2:
-
-    Is it even 2 player?
-    
 ##### Pause
 
     Unimplemented.

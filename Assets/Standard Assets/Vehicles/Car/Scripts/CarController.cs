@@ -36,6 +36,7 @@ namespace UnityStandardAssets.Vehicles.Car
         [SerializeField] private float m_RevRangeBoundary = 1f;
         [SerializeField] private float m_SlipLimit;
         [SerializeField] private float m_BrakeTorque;
+        [SerializeField] private ThrusterController thruster;
 
         private Quaternion[] m_WheelMeshLocalRotations;
         private Vector3 m_Prevpos, m_Pos;
@@ -69,6 +70,9 @@ namespace UnityStandardAssets.Vehicles.Car
 
             m_Rigidbody = GetComponent<Rigidbody>();
             m_CurrentTorque = m_FullTorqueOverAllWheels - (m_TractionControl*m_FullTorqueOverAllWheels);
+
+            // set thruster position
+            BoxCollider bc = GetComponentInChildren<BoxCollider>();
         }
 
 
@@ -126,7 +130,7 @@ namespace UnityStandardAssets.Vehicles.Car
         }
 
 
-        public void Move(float steering, float accel, float footbrake, float handbrake)
+        public void Move(float steering, float accel, float footbrake, float handbrake, bool isBoosting)
         {
             for (int i = 0; i < 4; i++)
             {
@@ -151,7 +155,8 @@ namespace UnityStandardAssets.Vehicles.Car
 
             SteerHelper();
             ApplyDrive(accel, footbrake);
-            CapSpeed();
+            if (isBoosting) thruster.ApplyThrust();
+            //CapSpeed(); // disabled because boost will take car past this limit
 
             //Set the handbrake.
             //Assuming that wheels 2 and 3 are the rear wheels.
@@ -170,7 +175,6 @@ namespace UnityStandardAssets.Vehicles.Car
             CheckForWheelSpin();
             TractionControl();
         }
-
 
         private void CapSpeed()
         {
