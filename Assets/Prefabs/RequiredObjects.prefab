@@ -652,6 +652,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 580e4505120915148aae5eb146a0003c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasBeenReached: 1
 --- !u!114 &114000010871447742
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -664,6 +665,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseKeys: 1b0000000d00000070000000
+  lastCheckpointKeys: 
   buttons:
   - {fileID: 1000012595260312}
   - {fileID: 1000010365894772}
@@ -839,6 +841,8 @@ MonoBehaviour:
   endPoint: {fileID: 1000012819508682}
   rocketCarPrefab: {fileID: 1000010611219636, guid: 4e885f1e487c81d4192fc947e6769754,
     type: 2}
+  gameType: 0
+  laps: 0
 --- !u!114 &114000011976996980
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1043,6 +1047,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 580e4505120915148aae5eb146a0003c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasBeenReached: 0
 --- !u!114 &114000013008803488
 MonoBehaviour:
   m_ObjectHideFlags: 1

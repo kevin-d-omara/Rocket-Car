@@ -9,7 +9,7 @@ public class CheckpointController : MonoBehaviour
     public delegate void CheckpointReached(GameObject checkpoint);
     public static event CheckpointReached OnCheckpointReached;
 
-    private bool hasBeenReached = false;
+    public bool hasBeenReached = false;
 
     private void OnTriggerEnter(Collider other)
     {
