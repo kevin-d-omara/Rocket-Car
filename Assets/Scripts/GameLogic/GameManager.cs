@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public enum GameTypes { Laps, RaceToFinish }
 
@@ -24,7 +25,7 @@ public class GameManager : MonoBehaviour
 
     private GameObject lastCheckpoint;
     private GameObject rocketCar;
-    private GameObject[] checkpoints;
+    private List<GameObject> checkpoints = new List<GameObject>();
 
     private void Awake()
     {
@@ -42,8 +43,20 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        checkpoints = GameObject.FindGameObjectsWithTag("Checkpoint");
+        // pre-race checkpoint initialization
+        GameObject[] checkpointArray = GameObject.FindGameObjectsWithTag("Checkpoint");
+        foreach (GameObject checkpoint in checkpointArray)
+        {
+            checkpoints.Add(checkpoint);
+        }
         spawnPoint.GetComponent<CheckpointController>().hasBeenReached = true;
+
+        // remove End Point from checkpoints if Laps GameType
+        if (gameType == GameTypes.Laps)
+        {
+            endPoint.GetComponent<CheckpointController>().hasBeenReached = true;
+            checkpoints.Remove(endPoint);
+        }
 
         if (OnLapCompleted != null)
         {
@@ -119,7 +132,7 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        return numReached == checkpoints.Length;
+        return numReached == checkpoints.Count;
     }
 
     private void ResetAllCheckpoints()
@@ -137,7 +150,7 @@ public class GameManager : MonoBehaviour
         Quaternion rotation = lastCheckpoint.transform.rotation;
 
         rocketCar = Instantiate(rocketCarPrefab, position, rotation) as GameObject;
-
+        rocketCar.GetComponentInChildren<ThrusterController>().ResetFuel();
 
         mainCamera.GetComponent<CameraController>().target = rocketCar.transform;
     }
@@ -160,5 +173,10 @@ public class GameManager : MonoBehaviour
         {
             OnRaceVictory();
         }
+    }
+
+    public GameObject GetSpawnPoint()
+    {
+        return spawnPoint;
     }
 }

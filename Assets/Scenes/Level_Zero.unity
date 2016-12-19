@@ -3195,6 +3195,84 @@ Transform:
   - {fileID: 856347623}
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!1 &732125153
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1000010794859810, guid: 4be7fb6ef8c21a24487daad68c27fd70,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 732125154}
+  - 222: {fileID: 732125156}
+  - 114: {fileID: 732125155}
+  m_Layer: 5
+  m_Name: New Lap
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &732125154
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 224000010180698006, guid: 4be7fb6ef8c21a24487daad68c27fd70,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 732125153}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1347752974}
+  m_RootOrder: 5
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.000091552734, y: 0.000045776367}
+  m_SizeDelta: {x: 1000, y: 78}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &732125155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114000011976996980, guid: 4be7fb6ef8c21a24487daad68c27fd70,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 732125153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 48
+    m_FontStyle: 3
+    m_BestFit: 0
+    m_MinSize: 3
+    m_MaxSize: 60
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: New Lap!
+--- !u!222 &732125156
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 222000012611839418, guid: 4be7fb6ef8c21a24487daad68c27fd70,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 732125153}
 --- !u!1 &733739815
 GameObject:
   m_ObjectHideFlags: 0
@@ -3859,8 +3937,8 @@ MonoBehaviour:
   endPoint: {fileID: 152890178}
   rocketCarPrefab: {fileID: 1000010611219636, guid: 4e885f1e487c81d4192fc947e6769754,
     type: 2}
-  gameType: 1
-  laps: 1
+  gameType: 0
+  laps: 2
 --- !u!1 &1180539269
 GameObject:
   m_ObjectHideFlags: 0
@@ -4336,6 +4414,8 @@ RectTransform:
   - {fileID: 591203771}
   - {fileID: 522520234}
   - {fileID: 490269067}
+  - {fileID: 1532005575}
+  - {fileID: 732125154}
   m_Father: {fileID: 77641930}
   m_RootOrder: 1
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -4359,6 +4439,11 @@ MonoBehaviour:
   timeText: {fileID: 591203773}
   retryText: {fileID: 522520236}
   lapText: {fileID: 490269069}
+  checkpointText: {fileID: 1532005576}
+  checkpointFadeInTime: 0.2
+  checkpointFadeOutTime: 0.4
+  checkpointPauseTime: 0.5
+  newLapText: {fileID: 732125155}
 --- !u!1 &1354604744
 GameObject:
   m_ObjectHideFlags: 0
@@ -5117,6 +5202,84 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 157d991f5f93c2f49b82f113ea353cfe, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1532005574
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1000010794859810, guid: 4be7fb6ef8c21a24487daad68c27fd70,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1532005575}
+  - 222: {fileID: 1532005577}
+  - 114: {fileID: 1532005576}
+  m_Layer: 5
+  m_Name: Checkpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1532005575
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 224000010180698006, guid: 4be7fb6ef8c21a24487daad68c27fd70,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1532005574}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1347752974}
+  m_RootOrder: 4
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.000061035156, y: 0}
+  m_SizeDelta: {x: 1000, y: 78}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1532005576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114000011976996980, guid: 4be7fb6ef8c21a24487daad68c27fd70,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1532005574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 48
+    m_FontStyle: 3
+    m_BestFit: 0
+    m_MinSize: 3
+    m_MaxSize: 60
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Checkpoint!
+--- !u!222 &1532005577
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 222000012611839418, guid: 4be7fb6ef8c21a24487daad68c27fd70,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1532005574}
 --- !u!1 &1566687418
 GameObject:
   m_ObjectHideFlags: 0
