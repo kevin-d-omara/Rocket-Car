@@ -5,6 +5,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private GameObject mainCamera; // Main Camera instance
     [SerializeField] private GameObject spawnPoint; // Checkpoint instance
+    [SerializeField] private GameObject endPoint;   // Checkpoint instance
     [SerializeField] private GameObject rocketCarPrefab;
 
     private GameObject lastCheckpoint;
