@@ -1,12 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+public enum GameTypes { Laps, RaceToFinish }
+
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private GameObject mainCamera; // Main Camera instance
     [SerializeField] private GameObject spawnPoint; // Checkpoint instance
     [SerializeField] private GameObject endPoint;   // Checkpoint instance
     [SerializeField] private GameObject rocketCarPrefab;
+    [SerializeField] private GameTypes gameType;
 
     private GameObject lastCheckpoint;
     private GameObject rocketCar;

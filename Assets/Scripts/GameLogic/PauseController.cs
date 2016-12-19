@@ -9,6 +9,7 @@ public class PauseController : MonoBehaviour
     public static event LastCheckpoint OnLastCheckpoint;
 
     [SerializeField] private List<KeyCode> pauseKeys;
+    [SerializeField] private List<KeyCode> lastCheckpointKeys;
     [SerializeField] private List<GameObject> buttons;
     private bool isPaused = false;
     private AudioSource[] allAudioSources;
@@ -38,6 +39,13 @@ public class PauseController : MonoBehaviour
                 {
                     PauseGame();
                 }
+            }
+        }
+        foreach (KeyCode key in lastCheckpointKeys)
+        {
+            if (Input.GetKeyDown(key))
+            {
+                BackToLastCheckpoint();
             }
         }
     }
