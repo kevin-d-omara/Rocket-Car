@@ -58,10 +58,12 @@ public class GameManager : MonoBehaviour
             checkpoints.Remove(endPoint);
         }
 
+        /*
         if (OnLapCompleted != null)
         {
             OnLapCompleted(CurrentLap, laps);
         }
+        */
     }
 
     private void OnEnable()
