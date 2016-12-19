@@ -10,13 +10,12 @@ public class PauseController : MonoBehaviour
 
     [SerializeField] private List<KeyCode> pauseKeys;
     [SerializeField] private List<KeyCode> lastCheckpointKeys;
-    [SerializeField] private List<GameObject> buttons;
     private bool isPaused = false;
     private AudioSource[] allAudioSources;
 
     private void Awake()
     {
-        SetActiveAllButtons(false);
+        SetActiveAllChildren(false);
     }
 
     private void Update()
@@ -54,7 +53,7 @@ public class PauseController : MonoBehaviour
     {
         Time.timeScale = 0f;
         PauseAllAudio();
-        SetActiveAllButtons(true);
+        SetActiveAllChildren(true);
         isPaused = true;
     }
 
@@ -62,7 +61,7 @@ public class PauseController : MonoBehaviour
     {
         Time.timeScale = 1f;
         UnPauseAllAudio();
-        SetActiveAllButtons(false);
+        SetActiveAllChildren(false);
         isPaused = false;
     }
 
@@ -90,15 +89,15 @@ public class PauseController : MonoBehaviour
         }
     }
 
-    // Buttons -----------------------------------------------------------------
-    private void SetActiveAllButtons(bool value)
+    private void SetActiveAllChildren(bool value)
     {
-        foreach (GameObject button in buttons)
+        foreach (Transform child in transform)
         {
-            button.SetActive(value);
+            child.gameObject.SetActive(value);
         }
     }
 
+    // Buttons -----------------------------------------------------------------
     public void BackToLastCheckpoint()
     {
         if (OnLastCheckpoint != null)
