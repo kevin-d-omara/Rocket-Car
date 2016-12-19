@@ -20,6 +20,8 @@ public class PlayerUIController : MonoBehaviour
     {
         checkpointText.gameObject.SetActive(false);
         newLapText.gameObject.SetActive(false);
+
+        lapText.text = "Lap " + gameManager.CurrentLap + "/" + gameManager.GetLapsToWin();
     }
 
     private void OnEnable()

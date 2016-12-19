@@ -57,13 +57,6 @@ public class GameManager : MonoBehaviour
             endPoint.GetComponent<CheckpointController>().hasBeenReached = true;
             checkpoints.Remove(endPoint);
         }
-
-        /*
-        if (OnLapCompleted != null)
-        {
-            OnLapCompleted(CurrentLap, laps);
-        }
-        */
     }
 
     private void OnEnable()
@@ -180,5 +173,10 @@ public class GameManager : MonoBehaviour
     public GameObject GetSpawnPoint()
     {
         return spawnPoint;
+    }
+
+    public int GetLapsToWin()
+    {
+        return laps;
     }
 }
