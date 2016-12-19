@@ -5,6 +5,9 @@ using System.Collections;
 [Serializable]
 public class ThrusterController : MonoBehaviour
 {
+    public delegate void FuelUpdate(float percentFuelRemaining);
+    public static event FuelUpdate OnFuelUpdate;
+
     [SerializeField] private float thrustForce = 100f; // Newtons
     [SerializeField] private float fuelDuration = 6f; // second
     private float fuelRemaining;
@@ -26,6 +29,12 @@ public class ThrusterController : MonoBehaviour
             timeAcc += Time.deltaTime;
             fuelRemaining -= Time.deltaTime;
             fuelRemaining = Mathf.Clamp(fuelRemaining, 0, fuelDuration); // ensure fuel doesn't drop below zero
+            if (OnFuelUpdate != null)
+            {
+                float percentFuelRemaining = fuelRemaining / fuelDuration;
+                OnFuelUpdate(Mathf.Clamp(percentFuelRemaining, 0, 1));
+            }
+
 
             Rigidbody rb = GetComponentInParent<Rigidbody>();
             //rb.AddForce(transform.forward * thrustForce); // center of RocketCar GameObject
@@ -36,5 +45,11 @@ public class ThrusterController : MonoBehaviour
     public void ResetFuel()
     {
         fuelRemaining = fuelDuration;
+
+        if (OnFuelUpdate != null)
+        {
+            float percentFuelRemaining = fuelRemaining / fuelDuration;
+            OnFuelUpdate(Mathf.Clamp(percentFuelRemaining, 0, 1));
+        }
     }
 }

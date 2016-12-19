@@ -14,12 +14,14 @@ public class PlayerUIController : MonoBehaviour
     {
         PauseController.OnLastCheckpoint += UpdateRetryText;
         GameManager.OnLapCompleted += UpdateLapText;
+        ThrusterController.OnFuelUpdate += UpdateBoostMeter;
     }
 
     private void OnDisable()
     {
         PauseController.OnLastCheckpoint -= UpdateRetryText;
         GameManager.OnLapCompleted -= UpdateLapText;
+        ThrusterController.OnFuelUpdate -= UpdateBoostMeter;
     }
 
     private void SetActiveAllChildren(bool value)
@@ -60,5 +62,10 @@ public class PlayerUIController : MonoBehaviour
     private void UpdateLapText(int currentLap, int totalLap)
     {
         lapText.text = "Lap " + currentLap + "/" + totalLap;
+    }
+
+    private void UpdateBoostMeter(float percentRemaining)
+    {
+        boostMeter.value = percentRemaining;
     }
 }
