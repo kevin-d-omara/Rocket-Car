@@ -16,7 +16,6 @@ public class CheckpointController : MonoBehaviour
         if (!hasBeenReached && other.transform.root.CompareTag("Player"))
         {
             hasBeenReached = true;
-            // play sound
 
             if (OnCheckpointReached != null)
             {

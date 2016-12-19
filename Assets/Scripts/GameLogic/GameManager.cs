@@ -23,12 +23,14 @@ public class GameManager : MonoBehaviour
     {
         CheckpointController.OnCheckpointReached += OnCheckpointReached;
         KillFloorController.OnKillFloorHit += OnKillFloorHit;
+        PauseController.OnLastCheckpoint += RevertToLastCheckpoint;
     }
 
     private void OnDisable()
     {
         CheckpointController.OnCheckpointReached -= OnCheckpointReached;
         KillFloorController.OnKillFloorHit -= OnKillFloorHit;
+        PauseController.OnLastCheckpoint -= RevertToLastCheckpoint;
     }
 
     private void Update()
@@ -54,6 +56,11 @@ public class GameManager : MonoBehaviour
     }
 
     private void OnKillFloorHit()
+    {
+        RevertToLastCheckpoint();
+    }
+
+    private void RevertToLastCheckpoint()
     {
         Destroy(rocketCar);
         SpawnCar();

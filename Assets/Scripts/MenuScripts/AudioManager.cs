@@ -9,9 +9,13 @@ public class AudioManager : MonoBehaviour
     public static AudioManager instance = null; // singleton AudioManager
 
     // music clips (looping background music)
-    [SerializeField] private AudioClip menu;
-    [SerializeField] private AudioClip[] inGame;
+    [SerializeField] private AudioClip menuSong;
+    [SerializeField] private AudioClip[] inGameSongs;
     private Dictionary<string, AudioSource> music = new Dictionary<string, AudioSource>();
+
+    [SerializeField] private AudioClip checkpoint;
+    [SerializeField] private AudioClip crash;
+    private AudioSource clipPlayer;
 
     private void Awake()
     {
@@ -27,12 +31,14 @@ public class AudioManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);  // preserve parent GameObject to preserve the singleton
 
         // populate music dictionary
-        music.Add("Menu", AddAudioSourceComponent(menu, true, false, 1f));
-        foreach (AudioClip song in inGame)
+        music.Add("Menu", AddAudioSourceComponent(menuSong, true, false, 1f));
+        foreach (AudioClip song in inGameSongs)
         {
             music.Add(song.ToString(), AddAudioSourceComponent(song, true, false, 1f));
         }
         music["Menu"].Play();
+
+        clipPlayer = gameObject.AddComponent<AudioSource>();
     }
 
     private AudioSource AddAudioSourceComponent(AudioClip clip, bool loop, bool playAwake, float vol)
@@ -49,14 +55,20 @@ public class AudioManager : MonoBehaviour
     {
         // music subscriptions
         MenuButtonController.OnPlayGame += PlayInGame;
-        //UIController.OnBackToMenu += PlayMenu;
+
+        // clip subscriptions
+        CheckpointController.OnCheckpointReached += PlayCheckpoint;
+        KillFloorController.OnKillFloorHit += PlayCrash;
     }
 
     private void OnDisable()
     {
         // music subscriptions
         MenuButtonController.OnPlayGame -= PlayInGame;
-        //UIController.OnBackToMenu += PlayMenu;
+
+        // clip subscriptions
+        CheckpointController.OnCheckpointReached -= PlayCheckpoint;
+        KillFloorController.OnKillFloorHit -= PlayCrash;
     }
 
     private void PlayMenu()                                                     // TODO: use StartCoroutine() w/ yield return WaitForFixedUpdate + Time.deltaTime + lerp to fade out
@@ -85,5 +97,15 @@ public class AudioManager : MonoBehaviour
                 song.Value.Stop();
             }
         }
+    }
+
+    private void PlayCheckpoint(GameObject _)
+    {
+        clipPlayer.PlayOneShot(checkpoint);
+    }
+
+    private void PlayCrash()
+    {
+        clipPlayer.PlayOneShot(crash);
     }
 }
