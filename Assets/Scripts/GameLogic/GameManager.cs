@@ -5,6 +5,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private GameObject mainCamera; // Main Camera instance
     [SerializeField] private GameObject spawnPoint; // Checkpoint instance
+    [SerializeField] private GameObject endPoint;   // Checkpoint instance
     [SerializeField] private GameObject rocketCarPrefab;
 
     private GameObject lastCheckpoint;
@@ -23,12 +24,14 @@ public class GameManager : MonoBehaviour
     {
         CheckpointController.OnCheckpointReached += OnCheckpointReached;
         KillFloorController.OnKillFloorHit += OnKillFloorHit;
+        PauseController.OnLastCheckpoint += RevertToLastCheckpoint;
     }
 
     private void OnDisable()
     {
         CheckpointController.OnCheckpointReached -= OnCheckpointReached;
         KillFloorController.OnKillFloorHit -= OnKillFloorHit;
+        PauseController.OnLastCheckpoint -= RevertToLastCheckpoint;
     }
 
     private void Update()
@@ -54,6 +57,11 @@ public class GameManager : MonoBehaviour
     }
 
     private void OnKillFloorHit()
+    {
+        RevertToLastCheckpoint();
+    }
+
+    private void RevertToLastCheckpoint()
     {
         Destroy(rocketCar);
         SpawnCar();
