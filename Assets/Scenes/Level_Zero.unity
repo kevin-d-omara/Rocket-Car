@@ -309,6 +309,16 @@ Prefab:
       propertyPath: lastCheckpointKeys.Array.data[0]
       value: 114
       objectReference: {fileID: 0}
+    - target: {fileID: 114000011928421524, guid: 4be7fb6ef8c21a24487daad68c27fd70,
+        type: 2}
+      propertyPath: gameType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011928421524, guid: 4be7fb6ef8c21a24487daad68c27fd70,
+        type: 2}
+      propertyPath: laps
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4be7fb6ef8c21a24487daad68c27fd70, type: 2}
   m_IsPrefabParent: 0

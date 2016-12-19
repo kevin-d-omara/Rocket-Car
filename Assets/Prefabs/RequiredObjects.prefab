@@ -76,7 +76,7 @@ GameObject:
   - 114: {fileID: 114000010853080730}
   m_Layer: 10
   m_Name: Spawn Point
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -247,7 +247,7 @@ GameObject:
   - 114: {fileID: 114000012716397814}
   m_Layer: 10
   m_Name: End Point
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -842,7 +842,7 @@ MonoBehaviour:
   rocketCarPrefab: {fileID: 1000010611219636, guid: 4e885f1e487c81d4192fc947e6769754,
     type: 2}
   gameType: 0
-  laps: 0
+  laps: 1
 --- !u!114 &114000011976996980
 MonoBehaviour:
   m_ObjectHideFlags: 1
