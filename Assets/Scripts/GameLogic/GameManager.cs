@@ -12,6 +12,9 @@ public class GameManager : MonoBehaviour
     public delegate void RaceVictory();
     public static event RaceVictory OnRaceVictory;
 
+    public delegate void LapCompleted(int currentLap, int totalLap);
+    public static event LapCompleted OnLapCompleted;
+
     [SerializeField] private GameObject mainCamera; // Main Camera instance
     [SerializeField] private GameObject spawnPoint; // Checkpoint instance
     [SerializeField] private GameObject endPoint;   // Checkpoint instance
@@ -30,12 +33,22 @@ public class GameManager : MonoBehaviour
         CurrentLap = 1;
         NumberOfRetries = 0;
         SpawnCar();
+
+        if (gameType == GameTypes.RaceToFinish)
+        {
+            laps = 1;
+        }
     }
 
     private void Start()
     {
         checkpoints = GameObject.FindGameObjectsWithTag("Checkpoint");
         spawnPoint.GetComponent<CheckpointController>().hasBeenReached = true;
+
+        if (OnLapCompleted != null)
+        {
+            OnLapCompleted(CurrentLap, laps);
+        }
     }
 
     private void OnEnable()
@@ -80,6 +93,11 @@ public class GameManager : MonoBehaviour
                     {
                         CurrentLap++;
                         ResetAllCheckpoints();
+
+                        if (OnLapCompleted != null)
+                        {
+                            OnLapCompleted(CurrentLap, laps);
+                        }
                     }
                 }
                 else
@@ -131,13 +149,13 @@ public class GameManager : MonoBehaviour
 
     private void RevertToLastCheckpoint()
     {
+        NumberOfRetries++;
         Destroy(rocketCar);
         SpawnCar();
     }
 
     private void Victory()
     {
-        Debug.Log("Victory!");
         if (OnRaceVictory != null)
         {
             OnRaceVictory();

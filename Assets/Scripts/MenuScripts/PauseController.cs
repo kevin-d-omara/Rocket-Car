@@ -20,6 +20,7 @@ public class PauseController : MonoBehaviour
 
     private void Update()
     {
+        // check pause state
         if (isPaused)
         {
             foreach (KeyCode key in pauseKeys)
@@ -40,6 +41,8 @@ public class PauseController : MonoBehaviour
                 }
             }
         }
+
+        // check for retry
         foreach (KeyCode key in lastCheckpointKeys)
         {
             if (Input.GetKeyDown(key))
