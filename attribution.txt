@@ -1,12 +1,8 @@
-Code ===========================================================================
-
-File:   
-Extent: 
-Source: 
-Link:   
-
-Audio ==========================================================================
-    File:       
-    Creator:    
-    Copyright:  
-    Link:       
+File:   Assets > Models > GoalPost.fbx
+                          Loop.fbx
+                          Ring.fbx
+                          MiniRamps.fbx
+        (and their corresponding prefabs)
+Extent: Used raw, changed color/material.
+Source: Unity Standard Assets
+Link:   https://www.assetstore.unity3d.com/en/#!/content/32351
