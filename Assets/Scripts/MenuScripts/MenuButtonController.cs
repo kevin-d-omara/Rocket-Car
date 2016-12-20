@@ -8,9 +8,6 @@ public class MenuButtonController : MonoBehaviour
 {
     public Dictionary<string, GameObject> pages = new Dictionary<string, GameObject>();
 
-    public delegate void PlayGame();
-    public static event PlayGame OnPlayGame;
-
     private void Start()
     {
         foreach (Transform child in transform)
@@ -27,15 +24,6 @@ public class MenuButtonController : MonoBehaviour
                     child.gameObject.SetActive(false);
                 }
             }
-        }
-    }
-
-    public void PlayNewGame()
-    {
-        SceneManager.LoadScene("Level_Zero", LoadSceneMode.Single);
-        if (OnPlayGame != null)
-        {
-            OnPlayGame();
         }
     }
 

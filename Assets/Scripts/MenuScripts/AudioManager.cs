@@ -54,7 +54,7 @@ public class AudioManager : MonoBehaviour
     private void OnEnable()
     {
         // music subscriptions
-        MenuButtonController.OnPlayGame += PlayInGame;
+        LevelSelectController.OnPlayLevel += PlayInGame;
 
         // clip subscriptions
         CheckpointController.OnCheckpointReached += PlayCheckpoint;
@@ -64,7 +64,7 @@ public class AudioManager : MonoBehaviour
     private void OnDisable()
     {
         // music subscriptions
-        MenuButtonController.OnPlayGame -= PlayInGame;
+        LevelSelectController.OnPlayLevel -= PlayInGame;
 
         // clip subscriptions
         CheckpointController.OnCheckpointReached -= PlayCheckpoint;

@@ -11,7 +11,7 @@ public class MotionBlur : MonoBehaviour
     bool toggle = true;
     void OnEnable()
     {
-        Camera.main.depthTextureMode = DepthTextureMode.DepthNormals | DepthTextureMode.MotionVectors;
+        Camera.main.depthTextureMode =  DepthTextureMode.MotionVectors;
 
         //Load the motion blur shader into a material
         motionBlurMat = new Material(Shader.Find("Hidden/MotionBlur"));

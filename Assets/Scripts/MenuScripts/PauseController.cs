@@ -9,17 +9,18 @@ public class PauseController : MonoBehaviour
     public static event LastCheckpoint OnLastCheckpoint;
 
     [SerializeField] private List<KeyCode> pauseKeys;
-    [SerializeField] private List<GameObject> buttons;
+    [SerializeField] private List<KeyCode> lastCheckpointKeys;
     private bool isPaused = false;
     private AudioSource[] allAudioSources;
 
     private void Awake()
     {
-        SetActiveAllButtons(false);
+        SetActiveAllChildren(false);
     }
 
     private void Update()
     {
+        // check pause state
         if (isPaused)
         {
             foreach (KeyCode key in pauseKeys)
@@ -40,13 +41,22 @@ public class PauseController : MonoBehaviour
                 }
             }
         }
+
+        // check for retry
+        foreach (KeyCode key in lastCheckpointKeys)
+        {
+            if (Input.GetKeyDown(key))
+            {
+                BackToLastCheckpoint();
+            }
+        }
     }
 
     private void PauseGame()
     {
         Time.timeScale = 0f;
         PauseAllAudio();
-        SetActiveAllButtons(true);
+        SetActiveAllChildren(true);
         isPaused = true;
     }
 
@@ -54,7 +64,7 @@ public class PauseController : MonoBehaviour
     {
         Time.timeScale = 1f;
         UnPauseAllAudio();
-        SetActiveAllButtons(false);
+        SetActiveAllChildren(false);
         isPaused = false;
     }
 
@@ -82,15 +92,15 @@ public class PauseController : MonoBehaviour
         }
     }
 
-    // Buttons -----------------------------------------------------------------
-    private void SetActiveAllButtons(bool value)
+    private void SetActiveAllChildren(bool value)
     {
-        foreach (GameObject button in buttons)
+        foreach (Transform child in transform)
         {
-            button.SetActive(value);
+            child.gameObject.SetActive(value);
         }
     }
 
+    // Buttons -----------------------------------------------------------------
     public void BackToLastCheckpoint()
     {
         if (OnLastCheckpoint != null)
