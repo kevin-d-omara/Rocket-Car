@@ -17,5 +17,4 @@ Extent: Font used throughout game
 Source: 1001freefonts
 Link:   http://www.1001freefonts.com/racing_sans_one.font
 
-
-http://www.1001freefonts.com/racing_sans_one.font
+Skyboxes: Hedgehog Team
