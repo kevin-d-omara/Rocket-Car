@@ -60,6 +60,7 @@ public class AudioManager : MonoBehaviour
         // clip subscriptions
         CheckpointController.OnCheckpointReached += PlayCheckpoint;
         KillFloorController.OnKillFloorHit += PlayCrash;
+        PauseController.OnLastCheckpoint += PlayCrash;
     }
 
     private void OnDisable()
@@ -70,6 +71,7 @@ public class AudioManager : MonoBehaviour
         // clip subscriptions
         CheckpointController.OnCheckpointReached -= PlayCheckpoint;
         KillFloorController.OnKillFloorHit -= PlayCrash;
+        PauseController.OnLastCheckpoint -= PlayCrash;
     }
 
     private void PlayMenu()                                                     // TODO: use StartCoroutine() w/ yield return WaitForFixedUpdate + Time.deltaTime + lerp to fade out
