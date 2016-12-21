@@ -1452,10 +1452,10 @@ MonoBehaviour:
   levelList:
   - displayName: Level 1
     sceneName: Level_Barry_2
-    picture: {fileID: 21300000, guid: c458e5c3437d4d943a74d6e21f248e97, type: 3}
+    picture: {fileID: 21300000, guid: 32fc87d1c08f90b429debc13e1ec4fb7, type: 3}
   - displayName: Level 2
     sceneName: Level_Iyac_2
-    picture: {fileID: 21300000, guid: 514409b2b27bf7e428c3c60cae009924, type: 3}
+    picture: {fileID: 21300000, guid: 1cf24b0fda5fa93429aede40514247f0, type: 3}
   current: {fileID: 337654064}
   next: {fileID: 2035043237}
   previous: {fileID: 1419310431}
