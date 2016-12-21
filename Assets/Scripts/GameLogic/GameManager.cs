@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
 
     public delegate void LapCompleted(int currentLap, int totalLap);
     public static event LapCompleted OnLapCompleted;
+  
 
     [SerializeField] private GameObject mainCamera; // Main Camera instance
     [SerializeField] private GameObject spawnPoint; // Checkpoint instance
@@ -22,6 +23,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject rocketCarPrefab;
     [SerializeField] private GameTypes gameType;
     [SerializeField] private int laps = 1; // ignore if GameType is RaceToFinish
+
+    private GameObject PlayerUI;
 
     private GameObject lastCheckpoint;
     private GameObject rocketCar;
@@ -43,6 +46,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        
         // pre-race checkpoint initialization
         GameObject[] checkpointArray = GameObject.FindGameObjectsWithTag("Checkpoint");
         foreach (GameObject checkpoint in checkpointArray)
@@ -57,6 +61,7 @@ public class GameManager : MonoBehaviour
             endPoint.GetComponent<CheckpointController>().hasBeenReached = true;
             checkpoints.Remove(endPoint);
         }
+    
     }
 
     private void OnEnable()
@@ -64,6 +69,14 @@ public class GameManager : MonoBehaviour
         CheckpointController.OnCheckpointReached += OnCheckpointReached;
         KillFloorController.OnKillFloorHit += OnKillFloorHit;
         PauseController.OnLastCheckpoint += RevertToLastCheckpoint;
+        LevelInitializer.onStartRace += startRace;
+        rocketCar.GetComponent<UnityStandardAssets.Vehicles.Car.CarUserControl>().enabled = false;
+        PlayerUI = GameObject.Find("PlayerUI");
+        PlayerUI.SetActive(false);
+    }
+    private void startRace()
+    {
+        rocketCar.GetComponent<UnityStandardAssets.Vehicles.Car.CarUserControl>().enabled = true; PlayerUI.SetActive(true);
     }
 
     private void OnDisable()
@@ -71,6 +84,7 @@ public class GameManager : MonoBehaviour
         CheckpointController.OnCheckpointReached -= OnCheckpointReached;
         KillFloorController.OnKillFloorHit -= OnKillFloorHit;
         PauseController.OnLastCheckpoint -= RevertToLastCheckpoint;
+        LevelInitializer.onStartRace -= startRace;
     }
 
     private void Update()
@@ -168,6 +182,10 @@ public class GameManager : MonoBehaviour
         {
             OnRaceVictory();
         }
+        
+        //stop player controls and disable playerUI
+        rocketCar.GetComponent<UnityStandardAssets.Vehicles.Car.CarUserControl>().enabled = false;
+        PlayerUI.SetActive(false);
     }
 
     public GameObject GetSpawnPoint()

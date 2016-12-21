@@ -3651,8 +3651,8 @@ MonoBehaviour:
   endPoint: {fileID: 152890178}
   rocketCarPrefab: {fileID: 1000010611219636, guid: 4e885f1e487c81d4192fc947e6769754,
     type: 2}
-  gameType: 1
-  laps: 1
+  gameType: 0
+  laps: 2
 --- !u!4 &1060865451
 Transform:
   m_ObjectHideFlags: 0

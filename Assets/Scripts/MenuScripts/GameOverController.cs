@@ -13,6 +13,7 @@ public class GameOverController : MonoBehaviour
     private void Start()
     {
         SetActiveAllChildren(false);
+
     }
 
     private void OnEnable()
@@ -30,7 +31,9 @@ public class GameOverController : MonoBehaviour
         foreach (Transform child in transform)
         {
             child.gameObject.SetActive(value);
+           
         }
+      
     }
 
     private void OnGameOver()

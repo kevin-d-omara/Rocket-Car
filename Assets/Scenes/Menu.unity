@@ -1476,6 +1476,9 @@ MonoBehaviour:
   - displayName: Kevin
     sceneName: Level_Kevin
     picture: {fileID: 21300000, guid: 866a8a7bb1e108040a95d9cd276f50ae, type: 3}
+  - displayName: Intro
+    sceneName: Level_Barry_2
+    picture: {fileID: 21300000, guid: 224af9329a7e2e0419ff09a5a5dd0278, type: 3}
   current: {fileID: 337654064}
   next: {fileID: 2035043237}
   previous: {fileID: 1419310431}

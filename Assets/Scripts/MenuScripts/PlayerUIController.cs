@@ -24,6 +24,14 @@ public class PlayerUIController : MonoBehaviour
         lapText.text = "Lap " + gameManager.CurrentLap + "/" + gameManager.GetLapsToWin();
     }
 
+    private void SetActiveAllChildren(bool value)
+    {
+        foreach (Transform child in transform)
+        {
+            child.gameObject.SetActive(value);
+        }
+    }
+
     private void OnEnable()
     {
         PauseController.OnLastCheckpoint += UpdateRetryText;
@@ -40,13 +48,7 @@ public class PlayerUIController : MonoBehaviour
         CheckpointController.OnCheckpointReached -= PresentCheckpointText;
     }
 
-    private void SetActiveAllChildren(bool value)
-    {
-        foreach (Transform child in transform)
-        {
-            child.gameObject.SetActive(value);
-        }
-    }
+ 
 
     // Timer -------------------------------------------------------------------
     private void Update()

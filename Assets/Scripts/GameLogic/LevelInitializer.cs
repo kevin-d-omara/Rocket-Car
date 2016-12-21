@@ -6,12 +6,17 @@ public class LevelInitializer : MonoBehaviour
     float countDown;
     Text countDownText;
 
+    public delegate void StartRace();
+    public static event StartRace onStartRace;
+
     public void Start()
     {
         countDownText = GetComponent<Text>();
         countDownText.text = "3";
         StartCoroutine(tickCountDown());
         GameObject.Find("Main Camera").GetComponent<DOF>().enabled = true;
+        GameObject.Find("Main Camera").GetComponent<DOF>().farPlane = 0;
+        GameObject.Find("Main Camera").GetComponent<DOF>().nearPlane = 0;
     }
 
     IEnumerator tickCountDown()
@@ -31,6 +36,9 @@ public class LevelInitializer : MonoBehaviour
 
     public void StartGame()
     {
-        GameObject.Find("Main Camera").GetComponent<DOF>().enabled = false;
+        GameObject.Find("Main Camera").GetComponent<DOF>().farPlane = 200;
+        GameObject.Find("Main Camera").GetComponent<DOF>().nearPlane = 0;
+        if(onStartRace!=null)
+            onStartRace();
     }
 }
