@@ -1394,7 +1394,7 @@ MonoBehaviour:
   rocketCarPrefab: {fileID: 1000010611219636, guid: 4e885f1e487c81d4192fc947e6769754,
     type: 2}
   gameType: 0
-  laps: 2
+  laps: 3
 --- !u!4 &893117245
 Transform:
   m_ObjectHideFlags: 0
@@ -2765,11 +2765,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013177220906, guid: 157d991f5f93c2f49b82f113ea353cfe, type: 2}
       propertyPath: m_LocalScale.z
-      value: 1000.00006
+      value: 3000
       objectReference: {fileID: 0}
     - target: {fileID: 4000013177220906, guid: 157d991f5f93c2f49b82f113ea353cfe, type: 2}
       propertyPath: m_LocalScale.y
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013177220906, guid: 157d991f5f93c2f49b82f113ea353cfe, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 3000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 157d991f5f93c2f49b82f113ea353cfe, type: 2}

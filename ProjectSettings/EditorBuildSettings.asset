@@ -7,14 +7,6 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/Menu.unity
-  - enabled: 0
-    path: Assets/Scenes/Level_Zero.unity
-  - enabled: 0
-    path: Assets/Scenes/Level_Iyac.unity
-  - enabled: 0
-    path: Assets/Scenes/Level_Kevin.unity
-  - enabled: 0
-    path: Assets/Scenes/Level_Barry.unity
   - enabled: 1
     path: Assets/Scenes/Level_Barry_2.unity
   - enabled: 1

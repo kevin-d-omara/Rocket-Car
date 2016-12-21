@@ -260,7 +260,7 @@ Prefab:
     - target: {fileID: 114000011928421524, guid: 4be7fb6ef8c21a24487daad68c27fd70,
         type: 2}
       propertyPath: laps
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4000010828474604, guid: 4be7fb6ef8c21a24487daad68c27fd70, type: 2}
       propertyPath: m_LocalScale.z
@@ -3093,11 +3093,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013177220906, guid: 157d991f5f93c2f49b82f113ea353cfe, type: 2}
       propertyPath: m_LocalScale.z
-      value: 2035.0964
+      value: 3000
       objectReference: {fileID: 0}
     - target: {fileID: 4000013177220906, guid: 157d991f5f93c2f49b82f113ea353cfe, type: 2}
       propertyPath: m_LocalScale.x
-      value: 2850.3489
+      value: 3000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 157d991f5f93c2f49b82f113ea353cfe, type: 2}
