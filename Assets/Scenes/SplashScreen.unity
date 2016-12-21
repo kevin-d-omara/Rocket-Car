@@ -191,6 +191,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioManager: {fileID: 114000010368669996, guid: 7ff64d864a221ce4b9cf27cf4f933673,
     type: 2}
+  background: {fileID: 896263994}
+  backgroundFadeInTime: 1.5
+  backgroundFadePauseTime: 1.5
 --- !u!1 &896263993
 GameObject:
   m_ObjectHideFlags: 0
