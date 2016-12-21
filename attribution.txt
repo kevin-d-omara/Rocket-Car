@@ -1,12 +1,21 @@
-Code ===========================================================================
+File:   Assets > Models > GoalPost.fbx
+                          Loop.fbx
+                          Ring.fbx
+                          MiniRamps.fbx
+        (and their corresponding prefabs)
+Extent: Used raw, changed color/material.
+Source: Unity Standard Assets
+Link:   https://www.assetstore.unity3d.com/en/#!/content/32351
 
-File:   
-Extent: 
-Source: 
-Link:   
+File:   Assets > Sprites > Splash-Background.psd (just the background art)
+Extent: Background art used raw
+Source: goodfon
+Link:   http://www.goodfon.su/download/prize-fighter-by-c85-art/6500x3735/
 
-Audio ==========================================================================
-    File:       
-    Creator:    
-    Copyright:  
-    Link:       
+File:   Assets > Sprites > Splash-Background.psd (just the background art)
+Extent: Font used throughout game
+Source: 1001freefonts
+Link:   http://www.1001freefonts.com/racing_sans_one.font
+
+
+http://www.1001freefonts.com/racing_sans_one.font

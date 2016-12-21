@@ -10,8 +10,6 @@ public class KillFloorController : MonoBehaviour
     {
         if (other.transform.root.CompareTag("Player"))
         {
-            // play sound
-
             if (OnKillFloorHit != null)
             {
                 OnKillFloorHit(); // broadcast event

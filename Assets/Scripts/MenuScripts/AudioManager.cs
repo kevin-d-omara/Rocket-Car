@@ -10,7 +10,8 @@ public class AudioManager : MonoBehaviour
 
     // music clips (looping background music)
     [SerializeField] private AudioClip menuSong;
-    [SerializeField] private AudioClip[] inGameSongs;
+    private string menuSongName;
+    [SerializeField] private AudioClip[] inGameSongs; // menuSong added by default
     private Dictionary<string, AudioSource> music = new Dictionary<string, AudioSource>();
 
     [SerializeField] private AudioClip checkpoint;
@@ -31,12 +32,12 @@ public class AudioManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);  // preserve parent GameObject to preserve the singleton
 
         // populate music dictionary
-        music.Add("Menu", AddAudioSourceComponent(menuSong, true, false, 1f));
+        music.Add(menuSong.ToString(), AddAudioSourceComponent(menuSong, true, false, 1f));
         foreach (AudioClip song in inGameSongs)
         {
             music.Add(song.ToString(), AddAudioSourceComponent(song, true, false, 1f));
         }
-        music["Menu"].Play();
+        music[menuSong.ToString()].Play();
 
         clipPlayer = gameObject.AddComponent<AudioSource>();
     }
@@ -59,6 +60,7 @@ public class AudioManager : MonoBehaviour
         // clip subscriptions
         CheckpointController.OnCheckpointReached += PlayCheckpoint;
         KillFloorController.OnKillFloorHit += PlayCrash;
+        PauseController.OnLastCheckpoint += PlayCrash;
     }
 
     private void OnDisable()
@@ -69,6 +71,7 @@ public class AudioManager : MonoBehaviour
         // clip subscriptions
         CheckpointController.OnCheckpointReached -= PlayCheckpoint;
         KillFloorController.OnKillFloorHit -= PlayCrash;
+        PauseController.OnLastCheckpoint -= PlayCrash;
     }
 
     private void PlayMenu()                                                     // TODO: use StartCoroutine() w/ yield return WaitForFixedUpdate + Time.deltaTime + lerp to fade out
@@ -81,7 +84,10 @@ public class AudioManager : MonoBehaviour
         List<string> songs = new List<string>(music.Keys);
         string randomSong = songs[Random.Range(0, songs.Count)];
 
-        PlaySong(randomSong);
+        if (randomSong != menuSong.ToString()) // don't restart menu song if selected randomly
+        {
+            PlaySong(randomSong);
+        }
     }
 
     private void PlaySong(string songName)

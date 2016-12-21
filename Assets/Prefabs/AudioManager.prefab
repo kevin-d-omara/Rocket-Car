@@ -55,6 +55,5 @@ MonoBehaviour:
   inGameSongs:
   - {fileID: 8300000, guid: 9fb6a26d714ce674896363c8e833bb04, type: 3}
   - {fileID: 8300000, guid: a7e0f29c1e958094995cdac009dc75bf, type: 3}
-  - {fileID: 8300000, guid: 54dced3daef146e4ca53d67ce07bb3b6, type: 3}
   checkpoint: {fileID: 8300000, guid: 64d20ced17d603c419a890719c633808, type: 3}
   crash: {fileID: 8300000, guid: 99b194001d48b644a88bce20753bcda9, type: 3}
