@@ -41,12 +41,12 @@ Controls:
 
 Levels:
 ==========
-### Rings of Saturn
-![Rings of Saturn](https://cloud.githubusercontent.com/assets/11803661/21442805/40445912-c855-11e6-89c9-53276ed3409b.png "Rings of Saturn")
+### Huygens Ring
+![Huygens Ring](https://cloud.githubusercontent.com/assets/11803661/21442805/40445912-c855-11e6-89c9-53276ed3409b.png "Huygens Ring")
 
 ### Fahreinheit 451E1.5
 ![Fahreinheit 451E1.5](https://cloud.githubusercontent.com/assets/11803661/21442803/404367a0-c855-11e6-8faa-7b93ca1c3bf9.png "Fahreinheit 451E1.5")
 
-### Level Zero
-![Level Zero](https://cloud.githubusercontent.com/assets/11803661/21442804/40442bae-c855-11e6-8524-f7af03244be0.png "Level Zero")
+### Practice
+![Practice](https://cloud.githubusercontent.com/assets/11803661/21442804/40442bae-c855-11e6-8524-f7af03244be0.png "Practice")
 
