@@ -1450,13 +1450,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelList:
-  - displayName: Rings of Saturn
+  - displayName: Huygens Ring
     sceneName: Level-Barry
     picture: {fileID: 21300000, guid: dcdde9cbb2d4ae04b9b6fdbe0dc30e3f, type: 3}
   - displayName: Fahrenheit 451E1.5
     sceneName: Level-Iyac
     picture: {fileID: 21300000, guid: c21329c07acbbee41bfee8b80e5f4211, type: 3}
-  - displayName: Level Zero
+  - displayName: Practice
     sceneName: Level-Zero
     picture: {fileID: 21300000, guid: a7362fa78678ac847aaf4e165d35d458, type: 3}
   current: {fileID: 337654064}
