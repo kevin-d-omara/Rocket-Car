@@ -10,6 +10,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu.unity
   - enabled: 1
-    path: Assets/Scenes/Level_Barry_2.unity
+    path: Assets/Scenes/Level-Barry.unity
   - enabled: 1
-    path: Assets/Scenes/Level_Iyac_2.unity
+    path: Assets/Scenes/Level-Iyac.unity
+  - enabled: 1
+    path: Assets/Scenes/Level-Zero.unity
