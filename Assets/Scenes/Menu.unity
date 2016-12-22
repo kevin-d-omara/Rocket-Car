@@ -1456,9 +1456,9 @@ MonoBehaviour:
   - displayName: Fahrenheit 451E1.5
     sceneName: Level-Iyac
     picture: {fileID: 21300000, guid: c21329c07acbbee41bfee8b80e5f4211, type: 3}
-  - displayName: Zero
+  - displayName: Level Zero
     sceneName: Level-Zero
-    picture: {fileID: 21300000, guid: c21329c07acbbee41bfee8b80e5f4211, type: 3}
+    picture: {fileID: 21300000, guid: a7362fa78678ac847aaf4e165d35d458, type: 3}
   current: {fileID: 337654064}
   next: {fileID: 2035043237}
   previous: {fileID: 1419310431}
