@@ -1,4 +1,4 @@
-![Gameplay](https://cloud.githubusercontent.com/assets/11803661/21442888/cbf361ba-c855-11e6-81e6-c514c3f6e533.png "Gameplay")
+![Gameplay](https://cloud.githubusercontent.com/assets/11803661/21443301/e1410e02-c858-11e6-885b-c87631dc7a33.png "Gameplay")
 
 Class: CS-583 Fall 2016
 
