@@ -10,7 +10,6 @@ Members:
     2. Barry Evans
     3. Iyac De Lara Torres
     4. Kyle Krick
-    5. Adrian Cedeño
     
 What is Rocket Car?
 ==========
