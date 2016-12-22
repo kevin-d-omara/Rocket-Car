@@ -12,7 +12,6 @@ Members:
     
 What is Rocket Car?
 ==========
-
 Rocket Car is definitely not your traditional racing game. It takes car racing to a whole another level. By heading into outer space, and bending the laws of the universe to recreate terrestrial physics, we take you to hand-crafted racing tracks placed right next to planetary bodies so you can enjoy an extraterrestrial race!
 
 
@@ -22,7 +21,6 @@ Installation
 
 Instructions:
 ==========
-
 - Drive your car around the track as fast as you can!
 
 - Use your booster for extra speed!
@@ -33,8 +31,6 @@ Instructions:
 
 Controls:
 ==========
-##### Player 1:
-
     Accelerate - 'W'
     Brake - 'S'
     Steer Left/Right - 'A, D'
