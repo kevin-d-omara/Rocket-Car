@@ -1,5 +1,7 @@
 ![Gameplay](https://cloud.githubusercontent.com/assets/11803661/21443301/e1410e02-c858-11e6-885b-c87631dc7a33.png "Gameplay")
 
+San Diego State University
+
 Class: CS-583 Fall 2016
 
 Members:
