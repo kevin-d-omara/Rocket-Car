@@ -1452,13 +1452,13 @@ MonoBehaviour:
   levelList:
   - displayName: Rings of Saturn
     sceneName: Level-Barry
-    picture: {fileID: 21300000, guid: 32fc87d1c08f90b429debc13e1ec4fb7, type: 3}
+    picture: {fileID: 21300000, guid: dcdde9cbb2d4ae04b9b6fdbe0dc30e3f, type: 3}
   - displayName: Fahrenheit 451E1.5
     sceneName: Level-Iyac
-    picture: {fileID: 21300000, guid: 1cf24b0fda5fa93429aede40514247f0, type: 3}
+    picture: {fileID: 21300000, guid: c21329c07acbbee41bfee8b80e5f4211, type: 3}
   - displayName: Zero
     sceneName: Level-Zero
-    picture: {fileID: 21300000, guid: 1cf24b0fda5fa93429aede40514247f0, type: 3}
+    picture: {fileID: 21300000, guid: c21329c07acbbee41bfee8b80e5f4211, type: 3}
   current: {fileID: 337654064}
   next: {fileID: 2035043237}
   previous: {fileID: 1419310431}
