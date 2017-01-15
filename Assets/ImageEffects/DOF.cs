@@ -110,7 +110,9 @@ public class DOF : MonoBehaviour
 
     void OnDisable()
     {
-     
+        if(null != kernelBuffer)
+            kernelBuffer.Dispose();
+        kernelBuffer = null;
     }
 
 
