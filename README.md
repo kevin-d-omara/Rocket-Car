@@ -33,7 +33,7 @@ Instructions:
 Controls:
 ==========
     Accelerate - 'W'
-    Brake - 'S'
+    Reverse - 'S'
     Steer Left/Right - 'A, D'
     Handbrake - 'Space'
     Booster - 'Left Shift'
@@ -50,4 +50,3 @@ Levels:
 
 ### Practice
 ![Practice](https://cloud.githubusercontent.com/assets/11803661/21442804/40442bae-c855-11e6-8524-f7af03244be0.png "Practice")
-
