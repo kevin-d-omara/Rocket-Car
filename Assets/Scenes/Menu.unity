@@ -715,7 +715,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &338433234
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1270,7 +1270,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Accelerate - 'W'\r\nBrake - 'S'\r\nSteer Left/Right - 'A, D'\r\nHandbrake
+  m_Text: "Accelerate - 'W'\r\nReverse - 'S'\r\nSteer Left/Right - 'A, D'\r\nHandbrake
     - 'Space'\r\nBooster - 'Left Shift'\nLast Checkpoint - 'R'\nPause - 'Escape, Enter/Return,
     P'"
 --- !u!222 &660260483
@@ -1416,7 +1416,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &897254283
 RectTransform:
   m_ObjectHideFlags: 0
