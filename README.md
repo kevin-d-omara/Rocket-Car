@@ -6,10 +6,10 @@ Class: CS-583 Fall 2016
 
 Members:
 
-    1. Kevin O'Mara (Leader)
-    2. Barry Evans
-    3. Iyac De Lara Torres
-    4. Kyle Krick
+    1. Kevin O'Mara (Lead Programmer)
+    2. Barry Evans (Lead Artist)
+    3. Iyac De Lara Torres (Level Designer)
+    4. Kyle Krick (Audio Engineer)
     
 What is Rocket Car?
 ==========
@@ -32,13 +32,15 @@ Instructions:
 
 Controls:
 ==========
-    Accelerate - 'W'
-    Reverse - 'S'
-    Steer Left/Right - 'A, D'
-    Handbrake - 'Space'
-    Booster - 'Left Shift'
-    Last Checkpoint - 'R'
-    Pause - `Escape`, `Enter/Return`, `P`
+Control | Key
+--- | :---:
+Accelerate | W
+Reverse | S
+Steer Left/Right | A, D
+Handbrake | Space
+Booster | Left Shift
+Last Checkpoint | R
+Pause | Escape, Enter, P
 
 Levels:
 ==========
